@@ -1,17 +1,20 @@
-# action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'gov-changelog-action'
+description: 'Generate a changelog from git commits'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  REPO_NAME:
+    description: "The name of the repo: user/repo_name"
+    required: false
+    default: ''
+  ACCESS_TOKEN:
+    description: "Github Access Token you want to use. Just pass GITHUB_TOKEN"
     required: true
-    default: 'World'
+    PATH:
+    description: "Path to the file you want to add contributors' list. You can use <branch>:<file> format to specify the branch"
+    required: false
+    default: 'CHANGELOG.md'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
-    

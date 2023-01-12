@@ -1,15 +1,18 @@
-on: [push]
-
+name: Generate changelog
+on:
+  release:
+    types: [created, edited]
+  push:
+    branches: [$default-branch]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 jobs:
-  hello_world_job:
+  generate-changelog:
     runs-on: ubuntu-latest
-    name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: joshlynchONS/gov-changelog-action@first_action
-        with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: joshlynchONS/gov-changelog-action@first_action
+      with:
+        ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
