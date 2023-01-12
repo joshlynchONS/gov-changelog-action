@@ -10,4 +10,7 @@ jobs:
         fetch-depth: 0
     - uses: joshlynchONS/gov-changelog-action@first_action
       with:
+        REPO_NAME: ''
         ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        PATH: 'CHANGELOG.md'
+        COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
