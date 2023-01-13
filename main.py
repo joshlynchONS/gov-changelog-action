@@ -25,5 +25,5 @@ access_token = get_inputs("ACCESS_TOKEN")
 
 g = Github(access_token)
 print("got g")
-user = g.get_user()
-print(user.login)
+repo = g.get_repo("")
+print(repo)
