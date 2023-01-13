@@ -34,4 +34,5 @@ tags = repo.get_tags()
 print(tags)
 commits = repo.get_commits(sha=branch)
 for commit in commits:
-    print(commit)
+    message = commit.commit.message.split("\n\n")
+    print(message)
