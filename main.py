@@ -33,4 +33,5 @@ print(releases)
 tags = repo.get_tags()
 print(tags)
 commits = repo.get_commits(sha=branch)
-print(commits.sha)
+for commit in commits:
+    print(commit)
