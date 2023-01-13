@@ -1,4 +1,4 @@
-from src.get_github_data import (
+from get_github_data import (
     get_inputs,
     get_commits,
     separate_commits,
