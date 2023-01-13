@@ -25,5 +25,5 @@ access_token = get_inputs("ACCESS_TOKEN")
 
 g = Github(access_token)
 print("got g")
-repo = g.get_repo("gov-changelog-action")
+repo = g.get_repo("joshlynchONS/gov-changelog-action")
 print(repo)
