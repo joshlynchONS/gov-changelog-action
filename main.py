@@ -7,7 +7,7 @@ from get_github_data import (
 from github import Github
 
 access_token = get_inputs("ACCESS_TOKEN")
-branch = "main"
+branch = "first_action"
 
 g = Github(access_token)
 repo = g.get_repo("joshlynchONS/gov-changelog-action")
@@ -23,14 +23,14 @@ commits = get_commits(repo, branch)
 path = "CHANGELOG.md"
 commit_message = "docs: create changelog"
 
-print(releases)
-print(regenerate_releases)
-print(tags)
-print(tags_sha)
-for commit in commits:
-    print(commit)
-    message = commit.commit.message.split("\n\n")
-    print(message)
+# print(releases)
+# print(regenerate_releases)
+# print(tags)
+# print(tags_sha)
+# for commit in commits:
+#     print(commit)
+#     message = commit.commit.message.split("\n\n")
+#     print(message)
 
 commits_dict = separate_commits(tags_sha, commits)
 print(commits_dict)
