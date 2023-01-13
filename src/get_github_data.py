@@ -24,3 +24,18 @@ def get_commits(repo, branch):
     # function because will add try and except in case of no commits
     commits = repo.get_commits(sha=branch)
     return commits
+
+
+def separate_commits(tags_sha_dict, commits):
+    release_commits_dict = {}
+    inv_tags_sha_dict = {}
+    for k, v in tags_sha_dict.items():
+        inv_tags_sha_dict[v] = k
+        release_commits_dict[k] = []
+
+    for commit in commits:
+        if commit.sha in inv_tags_sha_dict:
+            tag = inv_tags_sha_dict[commit.sha]
+            release_commits_dict[tag].append(commit)
+
+    return release_commits_dict

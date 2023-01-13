@@ -1,4 +1,4 @@
-from get_github_data import get_inputs, get_commits
+from get_github_data import get_inputs, get_commits, separate_commits
 from github import Github
 
 access_token = get_inputs("ACCESS_TOKEN")
@@ -24,3 +24,6 @@ for commit in commits:
     print(commit)
     message = commit.commit.message.split("\n\n")
     print(message)
+
+commits_dict = separate_commits(tags_sha, commits)
+print(commits_dict)
