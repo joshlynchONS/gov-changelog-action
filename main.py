@@ -1,4 +1,9 @@
-from get_github_data import get_inputs, get_commits, separate_commits
+from src.get_github_data import (
+    get_inputs,
+    get_commits,
+    separate_commits,
+    create_changelog,
+)
 from github import Github
 
 access_token = get_inputs("ACCESS_TOKEN")
@@ -15,6 +20,8 @@ for tag in tags:
 releases = repo.get_releases()
 regenerate_releases = [r.tag_name for r in releases]
 commits = get_commits(repo, branch)
+path = "CHANGELOG.md"
+commit_message = "docs: create changelog"
 
 print(releases)
 print(regenerate_releases)
@@ -27,3 +34,5 @@ for commit in commits:
 
 commits_dict = separate_commits(tags_sha, commits)
 print(commits_dict)
+
+create_changelog(repo, path, commit_message, branch)

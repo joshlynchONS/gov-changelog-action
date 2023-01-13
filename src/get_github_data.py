@@ -1,4 +1,5 @@
 import os
+from jinja2 import Environment, FileSystemLoader
 
 
 def get_inputs(input_name: str, prefix="INPUT") -> str:
@@ -39,3 +40,16 @@ def separate_commits(tags_sha_dict, commits):
             release_commits_dict[tag].append(commit)
 
     return release_commits_dict
+
+
+def create_changelog(repo, path, commit_message, branch):
+    environment = Environment(loader=FileSystemLoader("src/"))
+    template = environment.get_template("template.txt")
+
+    releases = ["v0.0.1"]
+    commits = [{"prefix": "added", "message": "commit message test"}]
+
+    content = template.render(releases=releases, prefixes=["added"], commits=commits)
+    repo.create_file(
+        path=path, commit_message=commit_message, content=content, branch=branch
+    )
