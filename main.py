@@ -1,7 +1,7 @@
 from get_github_data import (
     get_inputs,
     get_commits,
-    separate_commits,
+    # separate_commits,
     create_changelog,
 )
 from github import Github
@@ -32,7 +32,7 @@ commit_message = "docs: create changelog"
 #     message = commit.commit.message.split("\n\n")
 #     print(message)
 
-commits_dict = separate_commits(tags_sha, commits)
-print(commits_dict)
+# commits_dict = separate_commits(tags_sha, commits)
+# print(commits_dict)
 
 create_changelog(repo, path, commit_message, branch)
