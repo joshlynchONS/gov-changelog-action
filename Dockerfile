@@ -4,6 +4,6 @@ RUN apt-get update && \
     apt-cache madison git | awk '{print $3}'| xargs -i apt-get install -y --no-install-recommends git={} && \
     rm -rf /var/lib/apt/lists/*
 
-COPY main.py entrypoint.sh requirements.txt /
-RUN chmod +x /entrypoint.sh /main.py
+COPY main.py src/get_github_data.py entrypoint.sh requirements.txt /
+RUN chmod +x /entrypoint.sh /src/get_github_data.py /main.py
 ENTRYPOINT ["/entrypoint.sh"]
