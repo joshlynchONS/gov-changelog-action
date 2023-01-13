@@ -1,4 +1,4 @@
-import github
+from github import Github
 import os
 
 
@@ -23,7 +23,7 @@ def get_inputs(input_name: str, prefix="INPUT") -> str:
 
 access_token = get_inputs("ACCESS_TOKEN")
 
-g = github.Github(access_token)
+g = Github(access_token)
 print("got g")
 user = g.get_user()
 print(user.login)

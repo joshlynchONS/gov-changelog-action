@@ -11,5 +11,5 @@ jobs:
     - uses: joshlynchONS/gov-changelog-action@first_action
       with:
         REPO_NAME: ''
-        ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PATH: 'CHANGELOG.md'
