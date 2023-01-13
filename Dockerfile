@@ -5,5 +5,5 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY main.py src/get_github_data.py entrypoint.sh requirements.txt /
-RUN chmod +x /entrypoint.sh /src/get_github_data.py /main.py
+RUN chmod +x /entrypoint.sh /main.py
 ENTRYPOINT ["/entrypoint.sh"]
