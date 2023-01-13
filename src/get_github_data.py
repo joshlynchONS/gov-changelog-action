@@ -18,3 +18,9 @@ def get_inputs(input_name: str, prefix="INPUT") -> str:
     actions/metadata-syntax-for-github-actions#example
     """
     return os.getenv(prefix + "_{}".format(input_name).upper())
+
+
+def get_commits(repo, branch):
+    # function because will add try and except in case of no commits
+    commits = repo.get_commits(sha=branch)
+    return commits
