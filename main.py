@@ -22,8 +22,15 @@ def get_inputs(input_name: str, prefix="INPUT") -> str:
 
 
 access_token = get_inputs("ACCESS_TOKEN")
+branch = "main"
 
 g = Github(access_token)
 print("got g")
 repo = g.get_repo("joshlynchONS/gov-changelog-action")
 print(repo)
+releases = repo.get_releases()
+print(releases)
+tags = repo.get_tags()
+print(tags)
+commits = repo.get_commits(sha=branch)
+print(commits)
