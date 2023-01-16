@@ -1,0 +1,17 @@
+name: Generate changelog
+on:
+  release:
+    types: [created, edited]
+
+jobs:
+  generate-changelog:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: joshlynchONS/gov-changelog-action@first_action
+      with:
+        REPO_NAME: ''
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PATH: 'CHANGELOG.md'

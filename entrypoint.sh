@@ -1,5 +1,8 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo "time=$time" >> $GITHUB_OUTPUT
+set -e
+
+python -m pip install --upgrade pip setuptools wheel
+pip install -r /requirements.txt
+
+python /main.py /src/get_github_data.py /src/template.txt

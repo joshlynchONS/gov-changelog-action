@@ -1,0 +1,14 @@
+{# src/template.txt #}
+
+# Changelog
+{% for release in releases %}
+## {{ release }} (DATE)
+{% for prefix in prefixes %}
+### {{ prefix }}
+{% for commit in commits %}
+{% if commit['prefix'] == prefix %}
+{{ commit['message'] }}
+{% endif -%}
+{% endfor -%}
+{% endfor -%}
+{% endfor %}
