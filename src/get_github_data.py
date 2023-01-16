@@ -1,5 +1,6 @@
 import os
 from jinja2 import Environment, FileSystemLoader
+from github import GithubObject
 
 
 def get_inputs(input_name: str, prefix="INPUT") -> str:
@@ -54,7 +55,5 @@ def create_changelog(repo, path, commit_message, branch):
     print(commit_message)
     print(content)
     repo.create_file(
-        path,
-        commit_message,
-        content,
+        path, commit_message, content, GithubObject.NotSet, GithubObject.NotSet
     )
