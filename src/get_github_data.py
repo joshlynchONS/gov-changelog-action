@@ -51,6 +51,6 @@ def create_changelog(repo, path, commit_message, branch):
 
     content = template.render(releases=releases, prefixes=["added"], commits=commits)
     print(path)
-    print(content)
     print(commit_message)
-    repo.create_file(path=path, message=commit_message, content=content)
+    print(content)
+    repo.create_file(path, commit_message, content, "NotSet", "NotSet")

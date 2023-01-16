@@ -21,7 +21,7 @@ releases = repo.get_releases()
 regenerate_releases = [r.tag_name for r in releases]
 commits = get_commits(repo, branch)
 path = "CHANGELOG.md"
-commit_message = "docs: create changelog"
+commit_message = "docs(CHANGELOG): update release notes"
 
 # print(releases)
 # print(regenerate_releases)
