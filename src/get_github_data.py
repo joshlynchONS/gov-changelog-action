@@ -59,5 +59,4 @@ def create_changelog(repo, path, commit_message, branch):
         commit_message,
         content,
         GithubObject._NotSetType,
-        GithubObject.NotSet,
     )
