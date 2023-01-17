@@ -8,6 +8,7 @@
 {% for commit in commits %}
 {% if commit.prefix == prefix and commit.release == release %}
 {{ commit.message }}
+{{ commit.release }}
 {% endif -%}
 {% endfor -%}
 {% endfor -%}
