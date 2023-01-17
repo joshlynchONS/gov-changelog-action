@@ -2,12 +2,10 @@
 
 # Changelog
 
-## v0.2.2 (DATE)
+## v0.2.3 (DATE)
 
 ### fix
 
-
-workflow version
 
 
 
@@ -15,15 +13,28 @@ workflow version
 
 
 
-initial action 
-
 
 ### other
 
 
 
 
-initial commit
+## v0.2.2 (DATE)
+
+### fix
+
+
+
+
+### feat
+
+
+
+
+### other
+
+
+
 
 ## v0.2.1 (DATE)
 
@@ -38,23 +49,17 @@ workflow version
 
 
 
-initial action 
-
 
 ### other
 
 
 
-
-initial commit
 
 ## v0.2.0 (DATE)
 
 ### fix
 
 
-workflow version
-
 
 
 ### feat
@@ -69,22 +74,16 @@ initial action
 
 
 
-initial commit
-
 ## v0.1.0 (DATE)
 
 ### fix
 
-
-workflow version
 
 
 
 ### feat
 
 
-
-initial action 
 
 
 ### other
