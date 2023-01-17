@@ -4,52 +4,52 @@
 
 ## v0.2.2 (DATE)
 
-### other
+### None
 
 
-fix: workflow version
+workflow version
 
 
-feat: initial action 
+initial action 
 
 
 initial commit
 
 ## v0.2.1 (DATE)
 
-### other
+### None
 
 
-fix: workflow version
+workflow version
 
 
-feat: initial action 
+initial action 
 
 
 initial commit
 
 ## v0.2.0 (DATE)
 
-### other
+### None
 
 
-fix: workflow version
+workflow version
 
 
-feat: initial action 
+initial action 
 
 
 initial commit
 
 ## v0.1.0 (DATE)
 
-### other
+### None
 
 
-fix: workflow version
+workflow version
 
 
-feat: initial action 
+initial action 
 
 
 initial commit
