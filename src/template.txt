@@ -5,8 +5,8 @@
 ## {{ release }} (DATE)
 {% for prefix in prefixes %}
 {% for commit in commits %}
-{% if commit.prefix == prefix and commit.release == release %}
-### {{ prefix }}
+{% if commit.prefix == prefix.prefix and commit.release == release %}
+### {{ prefix.heading }}
 {{ commit.message }}
 {% endif -%}
 {% endfor -%}
