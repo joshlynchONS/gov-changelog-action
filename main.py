@@ -11,7 +11,7 @@ from get_github_data import (
 from github import Github
 
 access_token = get_inputs("ACCESS_TOKEN")
-branch = "parse_commits"
+branch = "main"
 path = "CHANGELOG.md"
 commit_message = "docs(CHANGELOG): update release notes"
 
