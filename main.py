@@ -1,4 +1,13 @@
-from get_github_data import get_inputs, get_commits, separate_commits
+from get_github_data import (
+    get_inputs,
+    get_commits,
+    update_commits,
+    get_tags_sha_dict,
+    get_releases,
+    get_prefixes,
+    create_changelog_text,
+    update_changelog,
+)
 from github import Github
 
 access_token = get_inputs("ACCESS_TOKEN")
@@ -8,22 +17,11 @@ commit_message = "docs(CHANGELOG): update release notes"
 
 g = Github(access_token)
 repo = g.get_repo("joshlynchONS/gov-changelog-action")
-releases = repo.get_releases()
-tags = repo.get_tags()
-tags_sha = {}
+
+tags_sha = get_tags_sha_dict(repo)
 commits = get_commits(repo, branch)
-
-
-for tag in tags:
-    tags_sha[tag.name] = tag.commit.sha
-
-for commit in commits:
-    print(commit)
-    message = commit.commit.message.split("\n\n")
-    print(message)
-
-commits_dict = separate_commits(tags_sha, commits)
-print(commits_dict)
-
-releases = repo.get_releases()
-regenerate_releases = [r.tag_name for r in releases]
+commits = update_commits(tags_sha, commits)
+prefixes = get_prefixes(commits)
+releases = get_releases(repo)
+changelog_content = create_changelog_text(releases, prefixes, commits)
+update_changelog(repo, path, commit_message, changelog_content)
