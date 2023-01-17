@@ -6,8 +6,8 @@ from github import GithubObject
 class Commit:
     def __init__(self, message, release):
         self.message = message
-        self.prefix = "other"
         self.release = release
+        self.prefix = self.find_prefix()
 
     def find_prefix(self):
         split_message = self.message.split(": ")
