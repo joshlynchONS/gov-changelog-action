@@ -2,7 +2,7 @@ from get_github_data import get_inputs, get_commits, separate_commits
 from github import Github
 
 access_token = get_inputs("ACCESS_TOKEN")
-branch = "first_action"
+branch = "parse_commits"
 path = "CHANGELOG.md"
 commit_message = "docs(CHANGELOG): update release notes"
 
