@@ -2,15 +2,132 @@
 
 # Changelog
 
+## v0.2.6 (DATE)
+
+
+
+### chore
+add config file to docker files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## v0.2.5 (DATE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+### other
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## v0.2.4 (DATE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 ### fix
 workflow to correct branch
-
-
-
 
 
 
@@ -47,13 +164,30 @@ workflow to correct branch
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### docs(CHANGELOG)
 update release notes
-
-
-
-
-
 
 
 
@@ -85,9 +219,6 @@ update release notes
 
 
 
-
-
-
 ### other
 Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
@@ -101,7 +232,47 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## v0.2.1 (DATE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -131,10 +302,24 @@ workflow version
 
 
 
-
-
-
 ## v0.2.0 (DATE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -187,11 +372,28 @@ initial action
 
 
 
-
-
-
 ### other
 initial commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
