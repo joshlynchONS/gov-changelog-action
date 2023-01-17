@@ -18,6 +18,13 @@ class Commit:
             self.message = "".join(split_message)
 
 
+class Prefix:
+    def __init__(self, prefix, heading, version_bump):
+        self.prefix = prefix
+        self.heading = heading
+        self.version_bump = version_bump
+
+
 def get_inputs(input_name: str, prefix="INPUT") -> str:
     """
     Get a Github actions input by name
@@ -111,24 +118,30 @@ def get_releases(repo):
     return releases
 
 
-def get_prefixes(commits):
-    """Get a list of all the unique prefixes used within the commits
+def get_prefixes(config):
+    """Get a list of unique prefixes and their respective changelog heading
+    and version bump. This ignores any prefix that has the feature show set
+    as false.
 
     Parameters
     ----------
-    commits : list[Class Commit]
-        List of all commits
+    config : dict{prefix -> str: features -> dict}
+        yaml config containing all the permitted prefixes and their features
 
     Returns
     -------
-    list[str]
-        List of unique prefixes
+    list[class Prefix]
+        List of all prefixes as a class
     """
+    prefixes = config["prefixes"]
     unique_prefixes = []
-    for commit in commits:
-        prefix = commit.prefix
-        if prefix not in unique_prefixes:
-            unique_prefixes.append(prefix)
+    for prefix, features in prefixes.items():
+        show = features["show"]
+        if show:
+            heading = features["heading"]
+            version_bump = features["release"]
+            temp_prefix = Prefix(prefix, heading, version_bump)
+            unique_prefixes.append(temp_prefix)
     return unique_prefixes
 
 

@@ -39,3 +39,8 @@ prefixes:
       heading: "Chore"
       release: 0.0.0
       show: false
+    other:
+      description: "Any changes that are not labelled correctly"
+      heading: "Other"
+      release: 0.0.0
+      show: true
