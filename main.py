@@ -9,6 +9,10 @@ from get_github_data import (
     update_changelog,
 )
 from github import Github
+import yaml
+
+with open("changelog-config.yml") as f:
+    config = yaml.load(f, Loader=yaml.FullLoader)
 
 access_token = get_inputs("ACCESS_TOKEN")
 branch = "main"
@@ -25,3 +29,5 @@ prefixes = get_prefixes(commits)
 releases = get_releases(repo)
 changelog_content = create_changelog_text(releases, prefixes, commits)
 update_changelog(repo, path, commit_message, changelog_content)
+
+print(config)

@@ -89,8 +89,6 @@ def update_commits(tags_sha_dict, commits):
             message = commit.commit.message.split("\n\n")[0]
             temp_commit = Commit(message, tag)
             updated_commits.append(temp_commit)
-            print("Tag: ", tag)
-            print("message: ", message)
 
     return updated_commits
 
@@ -192,8 +190,6 @@ def update_changelog(repo, path, commit_message, content):
     content : str
         The contents of the changelog
     """
-    print("CONTENT")
-    print(content)
     current_changelog = repo.get_contents(path)
     sha = current_changelog.sha
     repo.update_file(path, commit_message, content, sha)

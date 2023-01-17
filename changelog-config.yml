@@ -1,0 +1,41 @@
+prefixes:
+    add:
+      description: "Adding a new feature"
+      heading: "Added"
+      release: 0.1.0
+      show: true
+    change:
+      description: "Changes to an existing feature"
+      heading: "Changed"
+      release: 0.0.1
+      show: true
+    depreciated:
+      description: "Updating depreciated code"
+      heading: "Depreciated"
+      release: 0.0.1
+      show: true
+    remove:
+      description: "Removing an existing feature"
+      heading: "Removed"
+      release: 0.1.0
+      show: true
+    fix:
+      description: "Fixing an existing bug"
+      heading: "Fixed"
+      release: 0.0.1
+      show: true
+    security:
+      description: "Improving/removing security concerns"
+      heading: "Security"
+      release: 0.0.1
+      show: true
+    docs:
+      description: "Updating documentation"
+      heading: "Added"
+      release: 0.0.0
+      show: true
+    chore:
+      description: "Any changes that do not effect user experience (e.g. style or refactoring)"
+      heading: "Chore"
+      release: 0.0.0
+      show: false
