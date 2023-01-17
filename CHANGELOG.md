@@ -2,12 +2,126 @@
 
 # Changelog
 
+## v0.2.7 (DATE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## v0.2.6 (DATE)
 
 
 
-### chore
-add config file to docker files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,35 +180,70 @@ add config file to docker files
 
 
 
-### other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Other
 Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -126,8 +275,43 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
-### fix
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Fixed
 workflow to correct branch
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -186,8 +370,40 @@ workflow to correct branch
 
 
 
-### docs(CHANGELOG)
-update release notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -219,35 +435,70 @@ update release notes
 
 
 
-### other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Other
 Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -279,8 +530,43 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
-### fix
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Fixed
 workflow version
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -348,8 +634,40 @@ workflow version
 
 
 
-### feat
-initial action 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## v0.1.0 (DATE)
@@ -372,32 +690,67 @@ initial action
 
 
 
-### other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Other
 initial commit
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
