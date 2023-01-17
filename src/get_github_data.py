@@ -192,6 +192,9 @@ def update_changelog(repo, path, commit_message, content):
     content : str
         The contents of the changelog
     """
+    print("CONTENT")
+    print(content)
     current_changelog = repo.get_contents(path)
     sha = current_changelog.sha
     repo.update_file(path, commit_message, content, sha)
+    print("UPDATE CHANGELOG")
