@@ -85,7 +85,7 @@ def update_commits(tags_sha_dict, commits):
     for commit in commits:
         if commit.sha in inv_tags_sha_dict:
             tag = inv_tags_sha_dict[commit.sha]
-            message = commit.commit.message.split("\n\n")
+            message = commit.commit.message.split("\n\n")[0]
             temp_commit = Commit(message, tag)
             updated_commits.append(temp_commit)
 

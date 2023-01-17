@@ -6,8 +6,8 @@
 {% for prefix in prefixes %}
 ### {{ prefix }}
 {% for commit in commits %}
-{% if commit['prefix'] == prefix %}
-{{ commit['message'] }}
+{% if commit.prefix == prefix and commit.release == release %}
+{{ commit.message }}
 {% endif -%}
 {% endfor -%}
 {% endfor -%}
