@@ -123,7 +123,7 @@ def get_releases(repo, number_releases):
     """
     releases = repo.get_releases()
 
-    if number_releases == -1:
+    if int(number_releases) == -1:
         number_releases = len(releases)
 
     updated_releases = []
