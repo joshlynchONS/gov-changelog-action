@@ -168,13 +168,16 @@ def update_release_prefixes(releases, commits):
     commits : list[class Commit]
         List of commits
     """
-    for commit in commits:
-        for release in releases:
+    updated_releases = []
+    for release in releases:
+        for commit in commits:
             if commit.release == release.tag:
                 release.update_prefixes(commit.prefix)
                 print("commit prefix: ", commit.prefix)
+                print("release prefix list: ", release.prefixes)
+        updated_releases.append(release)
 
-    return releases
+    return updated_releases
 
 
 def get_prefixes(config):
