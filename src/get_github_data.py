@@ -25,6 +25,12 @@ class Prefix:
         self.version_bump = version_bump
 
 
+class Release:
+    def __init__(self, tag, date):
+        self.tag = tag
+        self.date = date
+
+
 def get_inputs(input_name: str, prefix="INPUT") -> str:
     """
     Get a Github actions input by name
@@ -100,22 +106,35 @@ def update_commits(tags_sha_dict, commits):
     return updated_commits
 
 
-def get_releases(repo):
+def get_releases(repo, number_releases):
     """Get list of all releases within the repository
 
     Parameters
     ----------
     repo : Github.repo
         Github repository
+    number_releases : int
+        The number of releases to publish in the changelog
 
     Returns
     -------
-    list[str]
+    list[class Release]
         List of all releases from the github repository
     """
     releases = repo.get_releases()
-    releases = [r.tag_name for r in releases]
-    return releases
+
+    if number_releases == -1:
+        number_releases = len(releases)
+
+    updated_releases = []
+    for release_num in range(number_releases):
+        tag = releases[release_num].tag_name
+        date = releases[release_num].created_at
+        date = date.strftime("%Y-%m-%d")
+        temp_release = Release(tag, date)
+        updated_releases.append(temp_release)
+
+    return updated_releases
 
 
 def get_prefixes(config):
