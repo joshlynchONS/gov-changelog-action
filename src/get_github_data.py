@@ -124,7 +124,7 @@ def get_releases(repo, number_releases):
     releases = repo.get_releases()
 
     if int(number_releases) == -1:
-        number_releases = len(releases)
+        number_releases = releases.totatCount
 
     updated_releases = []
     for release_num in range(int(number_releases)):
