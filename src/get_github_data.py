@@ -157,7 +157,7 @@ def get_releases(repo, number_releases, unreleased_bool):
     return updated_releases
 
 
-def update_release_prefixes(releases, commits):
+def update_release_prefixes(releases, commits, prefixes):
     """Creates a list of prefixes within the release class to be used
     within the template
 
@@ -168,11 +168,12 @@ def update_release_prefixes(releases, commits):
     commits : list[class Commit]
         List of commits
     """
+    prefix_dict = {prefix.prefix: prefix for prefix in prefixes}
     updated_releases = []
     for release in releases:
         for commit in commits:
-            if commit.release == release.tag:
-                release.update_prefixes(commit.prefix)
+            if (commit.release == release.tag) and (commit.prefix in prefix_dict):
+                release.update_prefixes(prefix_dict[commit.prefix])
                 print("commit prefix: ", commit.prefix)
                 print("release prefix list: ", release.prefixes)
         updated_releases.append(release)
