@@ -97,15 +97,14 @@ def update_commits(tags_sha_dict, commits):
         inv_tags_sha_dict[v] = k
 
     for commit in commits:
+        print("Commit")
+        print(commit.sha)
+        print(commit.commit.message.split("\n\n")[0])
         if commit.sha in inv_tags_sha_dict:
             tag = inv_tags_sha_dict[commit.sha]
             message = commit.commit.message.split("\n\n")[0]
             temp_commit = Commit(message, tag)
             updated_commits.append(temp_commit)
-            print("Commit")
-            print(commit.sha)
-            print(message)
-            print(tag)
 
     return updated_commits
 
