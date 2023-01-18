@@ -3,10 +3,10 @@
 # Changelog
 {% for release in releases %}
 ## {{ release.tag }} {{ release.date }}
-{% for prefix in prefixes %}
+{% for prefix in release.prefixes %}
+### {{ prefix.heading }}
 {% for commit in commits %}
 {% if commit.prefix == prefix.prefix and commit.release == release.tag %}
-### {{ prefix.heading }}
 {{ commit.message }}
 {% endif -%}
 {% endfor -%}
