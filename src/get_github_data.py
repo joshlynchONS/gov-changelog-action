@@ -207,7 +207,7 @@ def get_prefixes(config):
     return unique_prefixes
 
 
-def create_changelog_text(releases, prefixes, commits):
+def create_changelog_text(releases, commits):
     """Create changelog content using a jinja2 template
 
     Parameters
@@ -226,7 +226,7 @@ def create_changelog_text(releases, prefixes, commits):
     """
     environment = Environment(loader=FileSystemLoader("src/"))
     template = environment.get_template("template.txt")
-    content = template.render(releases=releases, prefixes=prefixes, commits=commits)
+    content = template.render(releases=releases, commits=commits)
     return content
 
 
