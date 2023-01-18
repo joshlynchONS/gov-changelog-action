@@ -25,6 +25,7 @@ repo = g.get_repo("joshlynchONS/gov-changelog-action")
 
 tags_sha = get_tags_sha_dict(repo)
 commits = get_commits(repo, branch)
+
 commits = update_commits(tags_sha, commits)
 prefixes = get_prefixes(config)
 releases = get_releases(repo, num_releases)
