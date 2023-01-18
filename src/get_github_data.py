@@ -103,7 +103,7 @@ def update_commits(tags_sha_dict, commits, unreleased_bool):
     for k, v in tags_sha_dict.items():
         inv_tags_sha_dict[v] = k
 
-    if unreleased_bool:
+    if unreleased_bool == "true":
         current_release = "Unreleased"
     else:
         current_release = list(tags_sha_dict)[0]
@@ -143,7 +143,7 @@ def get_releases(repo, number_releases, unreleased_bool):
 
     updated_releases = []
 
-    if unreleased_bool:
+    if unreleased_bool == "true":
         temp_release = Release("Unreleased", "")
         updated_releases.append(temp_release)
 
