@@ -15,7 +15,7 @@ inputs:
   BRANCH:
     description: "The branch to update changelog in"
     required: false
-    default: ''
+    default: 'main'
   COMMIT_MESSAGE:
     description: "Commit message for the changelog update"
     required: false
