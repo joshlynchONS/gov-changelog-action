@@ -172,6 +172,9 @@ def update_release_prefixes(releases, commits):
         for release in releases:
             if commit.release == release.tag:
                 release.update_prefixes(commit.prefix)
+                print("commit prefix: ", commit.prefix)
+
+    return releases
 
 
 def get_prefixes(config):
