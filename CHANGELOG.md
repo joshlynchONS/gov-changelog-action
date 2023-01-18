@@ -4,23 +4,28 @@
 
 ## Unreleased 
 
-### 
+### Fixed
 
 
+fix missing dependency in update releases
 
 
 
+fix error in adding prefix str not class to release class
 
 
 
 
+fix non-updating release prefixes
 
 
 
 
+fix non-updating release prefixes
 
 
 
+fix non-updating release prefixes
 
 
 
@@ -79,7 +84,6 @@
 
 
 
-### 
 
 
 
@@ -89,17 +93,21 @@
 
 
 
+### Other
 
 
 
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
 
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
 
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -154,7 +162,6 @@
 
 
 
-### 
 
 
 
@@ -163,6 +170,35 @@
 
 
 
+
+
+
+
+
+
+
+
+### Added
+
+
+
+
+
+update release notes
+
+
+
+
+update release notes
+
+
+
+
+update release notes
+
+
+
+update release notes
 
 
 
@@ -231,7 +267,7 @@
 
 ## v0.2.12 2023-01-18
 
-### 
+### Added
 
 
 
@@ -246,6 +282,7 @@
 
 
 
+Add Unreleased commits to changelog
 
 
 
@@ -306,12 +343,12 @@
 
 
 
-### 
 
 
 
 
 
+### Added
 
 
 
@@ -327,16 +364,21 @@
 
 
 
+update release notes
 
 
+update release notes
 
 
+update release notes
 
 
+update release notes
 
 
 
 
+update release notes
 
 
 
@@ -381,7 +423,6 @@
 
 
 
-### 
 
 
 
@@ -396,6 +437,7 @@
 
 
 
+### Other
 
 
 
@@ -415,6 +457,7 @@
 
 
 
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -456,7 +499,6 @@
 
 
 
-### 
 
 
 
@@ -472,6 +514,32 @@
 
 
 
+
+
+
+
+### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+test commit for current branch
 
 
 
@@ -533,7 +601,7 @@
 
 ## v0.2.11 2023-01-18
 
-### 
+### Added
 
 
 
@@ -556,10 +624,12 @@
 
 
 
+update release notes
 
 
 
 
+update release notes
 
 
 
@@ -608,13 +678,13 @@
 
 
 
-### 
 
 
 
 
 
 
+### Fixed
 
 
 
@@ -638,70 +708,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+change workflow to new branch
 
 
 
@@ -760,7 +767,7 @@
 
 ## v0.2.10 2023-01-18
 
-### 
+### Added
 
 
 
@@ -787,20 +794,24 @@
 
 
 
+update release notes
 
 
 
 
+update release notes
 
 
 
 
 
 
+update release notes
 
 
 
 
+update release notes
 
 
 
@@ -835,7 +846,6 @@
 
 
 
-### 
 
 
 
@@ -844,6 +854,7 @@
 
 
 
+### Other
 
 
 
@@ -871,16 +882,19 @@
 
 
 
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
 
 
 
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
 
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -910,7 +924,6 @@
 
 
 
-### 
 
 
 
@@ -926,6 +939,7 @@
 
 
 
+### Fixed
 
 
 
@@ -954,71 +968,25 @@
 
 
 
+update template to work with release tags
 
 
 
+fix typo in get releases
 
 
+fix type error in get releases
 
 
 
+fix type error in get releases
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+fix type error in get_releases
 
 
 
@@ -1062,7 +1030,7 @@
 
 ## v0.2.9 2023-01-18
 
-### 
+### Fixed
 
 
 
@@ -1102,151 +1070,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+change workflow version to main
 
 
 
@@ -1289,7 +1113,7 @@
 
 ## v0.2.8 2023-01-18
 
-### 
+### Fixed
 
 
 
@@ -1334,10 +1158,12 @@
 
 
 
+update workflow to new branch
 
 
 
 
+wrong input to get prefix function
 
 
 
@@ -1364,13 +1190,13 @@
 
 
 
-### 
 
 
 
 
 
 
+### Other
 
 
 
@@ -1416,70 +1242,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -1516,236 +1279,11 @@
 
 ## v0.2.7 2023-01-17
 
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## v0.2.6 2023-01-17
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## v0.2.5 2023-01-17
 
-### 
+### Other
 
 
 
@@ -1799,6 +1337,7 @@
 
 
 
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -1820,12 +1359,12 @@
 
 
 
-### 
 
 
 
 
 
+### Fixed
 
 
 
@@ -1880,73 +1419,11 @@
 
 
 
+update workflow to new branch
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+fix incorrect branch in main
 
 
 
@@ -1972,7 +1449,7 @@
 
 ## v0.2.4 2023-01-17
 
-### 
+### Fixed
 
 
 
@@ -2030,77 +1507,10 @@
 
 
 
+workflow to correct branch
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+update template
 
 
 
@@ -2124,159 +1534,9 @@
 
 ## v0.2.3 2023-01-17
 
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## v0.2.2 2023-01-17
 
-### 
+### Other
 
 
 
@@ -2348,15 +1608,16 @@
 
 
 
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
-### 
 
 
 
 
 
+### Fixed
 
 
 
@@ -2426,150 +1687,11 @@
 
 
 
-### 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+update checkout version in workflow
 
 
 
@@ -2578,7 +1700,7 @@
 
 ## v0.2.1 2023-01-16
 
-### 
+### Fixed
 
 
 
@@ -2649,90 +1771,21 @@
 
 
 
+
+
+
+
+
+workflow version
 
 
 
 
 ## v0.2.0 2023-01-16
 
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## v0.1.0 2023-01-12
 
-### 
+### Other
 
 
 
@@ -2806,3 +1859,11 @@
 
 
 
+
+
+
+
+initial commit
+
+
+Initial commit
