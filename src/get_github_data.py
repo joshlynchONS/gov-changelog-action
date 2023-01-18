@@ -1,28 +1,4 @@
 import os
-from jinja2 import Environment, FileSystemLoader
-from github import GithubObject
-
-
-class Commit:
-    def __init__(self, message, release):
-        self.message = message
-        self.prefix = "other"
-        self.release = release
-        self.find_prefix()
-
-    def find_prefix(self):
-        split_message = self.message.split(": ")
-        if len(split_message) > 1:
-            self.prefix = split_message[0]
-            del split_message[0]
-            self.message = "".join(split_message)
-
-
-class Prefix:
-    def __init__(self, prefix, heading, version_bump):
-        self.prefix = prefix
-        self.heading = heading
-        self.version_bump = version_bump
 
 
 class Release:
@@ -37,25 +13,38 @@ class Release:
 
 
 def get_inputs(input_name: str, prefix="INPUT") -> str:
-    """
-    Get a Github actions input by name
+    """Get a Github action's input by name
 
-    Args:
-        input_name (str): input_name in workflow file.
-        prefix (str, optional): prefix of input variable. Defaults to 'INPUT'.
-
-    Returns:
-        str: action_input
-
-    References
+    Parameters
     ----------
-    [1] https://help.github.com/en/actions/automating-your-workflow-with-github-
-    actions/metadata-syntax-for-github-actions#example
+    input_name : str
+        Input name from workflow file.
+    prefix : str, optional
+        prefix of the input_name. Defaults to 'INPUT'
+
+    Returns
+    -------
+    str
+        The user input response
     """
     return os.getenv(prefix + "_{}".format(input_name).upper())
 
 
 def get_commits(repo, branch):
+    """Get all commits from the repository
+
+    Parameters
+    ----------
+    repo : Github.repo
+        The GitHub repository
+    branch : str
+        The repository branch
+
+    Returns
+    -------
+    List[Github.commit]
+        List of all github commits
+    """
     commits = repo.get_commits(sha=branch)
     return commits
 
@@ -71,52 +60,14 @@ def get_tags_sha_dict(repo):
     Returns
     -------
     dict{tag -> str: sha -> str}
-        _description_
+        Dictionary containing the repository tags with it's respective
+        sha string
     """
     tags = repo.get_tags()
     tags_sha = {}
     for tag in tags:
         tags_sha[tag.name] = tag.commit.sha
     return tags_sha
-
-
-def update_commits(tags_sha_dict, commits, unreleased_bool):
-    """Iterates through all commits and turns them into the updated class.
-    The output is a list of the updated commits
-
-    Parameters
-    ----------
-    tags_sha_dict : dict{tag -> str: sha -> str}
-        dictionary of all tags with their respective sha string
-    commits : list[Github.commit class]
-        list of all GitHub commits
-    unreleased_bool: bool
-        boolean variable on whether to include unreleased commits
-
-    Returns
-    -------
-    list[class Commit]
-        list of the updated commits
-    """
-    updated_commits = []
-    inv_tags_sha_dict = {}
-    for k, v in tags_sha_dict.items():
-        inv_tags_sha_dict[v] = k
-
-    if unreleased_bool == "true":
-        current_release = "Unreleased"
-    else:
-        current_release = list(tags_sha_dict)[0]
-
-    for commit in commits:
-        if commit.sha in inv_tags_sha_dict:
-            current_release = inv_tags_sha_dict[commit.sha]
-
-        message = commit.commit.message.split("\n\n")[0]
-        temp_commit = Commit(message, current_release)
-        updated_commits.append(temp_commit)
-
-    return updated_commits
 
 
 def get_releases(repo, number_releases, unreleased_bool):
@@ -155,118 +106,3 @@ def get_releases(repo, number_releases, unreleased_bool):
         updated_releases.append(temp_release)
 
     return updated_releases
-
-
-def update_release_prefixes(releases, commits, prefixes):
-    """Creates a list of prefixes within the release class to be used
-    within the template
-
-    Parameters
-    ----------
-    releases : list[class Release]
-        List of releases
-    commits : list[class Commit]
-        List of commits
-    """
-    prefix_dict = {prefix.prefix: prefix for prefix in prefixes}
-    updated_releases = []
-    for release in releases:
-        for commit in commits:
-            if (commit.release == release.tag) and (commit.prefix in prefix_dict):
-                release.update_prefixes(prefix_dict[commit.prefix])
-                print("commit prefix: ", commit.prefix)
-                print("release prefix list: ", release.prefixes)
-        updated_releases.append(release)
-
-    return updated_releases
-
-
-def get_prefixes(config):
-    """Get a list of unique prefixes and their respective changelog heading
-    and version bump. This ignores any prefix that has the feature show set
-    as false.
-
-    Parameters
-    ----------
-    config : dict{prefix -> str: features -> dict}
-        yaml config containing all the permitted prefixes and their features
-
-    Returns
-    -------
-    list[class Prefix]
-        List of all prefixes as a class
-    """
-    prefixes = config["prefixes"]
-    unique_prefixes = []
-    for prefix, features in prefixes.items():
-        show = features["show"]
-        if show:
-            heading = features["heading"]
-            version_bump = features["release"]
-            temp_prefix = Prefix(prefix, heading, version_bump)
-            unique_prefixes.append(temp_prefix)
-    return unique_prefixes
-
-
-def create_changelog_text(releases, commits):
-    """Create changelog content using a jinja2 template
-
-    Parameters
-    ----------
-    releases : list[str]
-        List of all unique releases
-    prefixes : list[str]
-        List of all unique prefixes
-    commits : list[class Commit]
-        List of all the commits
-
-    Returns
-    -------
-    str
-        The content of the changelog as a string
-    """
-    environment = Environment(loader=FileSystemLoader("src/"))
-    template = environment.get_template("template.txt")
-    content = template.render(releases=releases, commits=commits)
-    return content
-
-
-def create_changelog(repo, path, commit_message, content):
-    """Creates a new changelog document in the users repository.
-    To be used when no changelog exists
-
-    Parameters
-    ----------
-    repo : Github.repo
-        The GitHub repository
-    path : str
-        The desired path to the changelog
-    commit_message : str
-        The desired commit message for the workflow to use when creating the changelog
-    content : str
-        The contents of the changelog
-    """
-    repo.create_file(
-        path, commit_message, content, GithubObject.NotSet, GithubObject.NotSet
-    )
-
-
-def update_changelog(repo, path, commit_message, content):
-    """Updates an existing changelog document in the users repository
-    To be used when a changelog exists
-
-    Parameters
-    ----------
-    repo : Github.repo
-        The GitHub repository
-    path : str
-        The desired path to the changelog
-    commit_message : str
-        The desired commit message for the workflow to use when creating the changelog
-    content : str
-        The contents of the changelog
-    """
-    current_changelog = repo.get_contents(path)
-    sha = current_changelog.sha
-    repo.update_file(path, commit_message, content, sha)
-    print("UPDATE CHANGELOG")

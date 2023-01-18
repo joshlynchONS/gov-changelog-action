@@ -7,7 +7,7 @@
 ### {{ prefix.heading }}
 {% for commit in commits %}
 {% if commit.prefix == prefix.prefix and commit.release == release.tag %}
-{{ commit.message }}
+* {{ commit.message }}
 {% endif -%}
 {% endfor -%}
 {% endfor -%}
