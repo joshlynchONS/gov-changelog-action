@@ -9,7 +9,7 @@ inputs:
     description: "Github Access Token you want to use. Just pass GITHUB_TOKEN"
     required: true
   PATH:
-    description: "Path to the file you want to save the changelog as"
+    description: "Path to the file you want to save the changelog asss"
     required: false
     default: 'CHANGELOG.md'
   BRANCH:
@@ -24,10 +24,10 @@ inputs:
     description: "Whether to include unreleased commits in the changelog"
     required: false
     default: 'false'
-  REGENERATE_COUNT:
-    description: "Regenerate n recent releases' changelog. All non-exist releases will be generated. -1 means regenerating all the releases and 0 means no old releases will be regenerated"
+  RELEASE_COUNT:
+    description: "Number of releases to put into the changelog. Use -1 for all releases"
     required: false
-    default: '0'
+    default: '1'
 outputs:
   time: # id of output
     description: 'The time we greeted you'

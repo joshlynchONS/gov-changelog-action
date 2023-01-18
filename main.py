@@ -16,8 +16,9 @@ with open("changelog-config.yml") as f:
 
 access_token = get_inputs("ACCESS_TOKEN")
 branch = "main"
-path = "CHANGELOG.md"
-commit_message = "docs(CHANGELOG): update release notes"
+path = get_inputs("PATH")
+commit_message = get_inputs("COMMIT_MESSAGE")
+num_releases = get_inputs("RELEASE_COUNT")
 
 g = Github(access_token)
 repo = g.get_repo("joshlynchONS/gov-changelog-action")
@@ -26,6 +27,6 @@ tags_sha = get_tags_sha_dict(repo)
 commits = get_commits(repo, branch)
 commits = update_commits(tags_sha, commits)
 prefixes = get_prefixes(config)
-releases = get_releases(repo)
+releases = get_releases(repo, num_releases)
 changelog_content = create_changelog_text(releases, prefixes, commits)
 update_changelog(repo, path, commit_message, changelog_content)
