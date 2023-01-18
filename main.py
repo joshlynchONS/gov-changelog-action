@@ -7,6 +7,7 @@ from get_github_data import (
     get_prefixes,
     create_changelog_text,
     update_changelog,
+    update_release_prefixes,
 )
 from github import Github
 import yaml
@@ -29,5 +30,6 @@ commits = get_commits(repo, branch)
 commits = update_commits(tags_sha, commits, include_unreleased)
 prefixes = get_prefixes(config)
 releases = get_releases(repo, num_releases, include_unreleased)
+update_release_prefixes(releases, commits)
 changelog_content = create_changelog_text(releases, prefixes, commits)
 update_changelog(repo, path, commit_message, changelog_content)

@@ -29,6 +29,11 @@ class Release:
     def __init__(self, tag, date):
         self.tag = tag
         self.date = date
+        self.prefixes = []
+
+    def update_prefixes(self, commit_prefix):
+        if commit_prefix not in self.prefixes:
+            self.prefixes.append(commit_prefix)
 
 
 def get_inputs(input_name: str, prefix="INPUT") -> str:
@@ -150,6 +155,23 @@ def get_releases(repo, number_releases, unreleased_bool):
         updated_releases.append(temp_release)
 
     return updated_releases
+
+
+def update_release_prefixes(releases, commits):
+    """Creates a list of prefixes within the release class to be used
+    within the template
+
+    Parameters
+    ----------
+    releases : list[class Release]
+        List of releases
+    commits : list[class Commit]
+        List of commits
+    """
+    for commit in commits:
+        for release in releases:
+            if commit.release == release.tag:
+                release.update_prefixes(commit.prefix)
 
 
 def get_prefixes(config):
