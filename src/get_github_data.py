@@ -121,8 +121,8 @@ def get_releases(repo):
     """
     releases = repo.get_releases()
     release_tags = [r.tag_name for r in releases]
-    release_dates = [r.created_at for r in releases]
-    print(release_dates)
+    for r in releases:
+        print(r.created_at)
     return release_tags
 
 
