@@ -127,7 +127,7 @@ def get_releases(repo, number_releases):
         number_releases = len(releases)
 
     updated_releases = []
-    for release_num in range(number_releases):
+    for release_num in range(int(number_releases)):
         tag = releases[release_num].tag_name
         date = releases[release_num].created_at
         date = date.strftime("%Y-%m-%d")
