@@ -2,6 +2,115 @@
 
 # Changelog
 
+## v0.2.10 2023-01-18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Added
+update release notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## v0.2.9 2023-01-18
 
 
@@ -50,6 +159,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+### Fixed
+change workflow version to main
 
 
 
@@ -158,6 +278,17 @@
 
 
 
+### Fixed
+update workflow to new branch
+
+
+
+
+
+
+
+
+
 
 
 
@@ -199,6 +330,14 @@
 
 
 ## v0.2.7 2023-01-17
+
+
+
+
+
+
+
+
 
 
 
@@ -394,6 +533,14 @@
 
 
 
+
+
+
+
+
+
+
+
 ## v0.2.5 2023-01-17
 
 
@@ -492,6 +639,17 @@
 
 
 
+
+
+### Other
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+
+
+
 ## v0.2.4 2023-01-17
 
 
@@ -554,6 +712,17 @@
 
 
 
+### Fixed
+workflow to correct branch
+
+
+
+
+
+
+
+
+
 
 
 
@@ -591,6 +760,14 @@
 
 
 ## v0.2.3 2023-01-17
+
+
+
+
+
+
+
+
 
 
 
@@ -786,6 +963,17 @@
 
 
 
+
+
+
+
+
+### Other
+Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
 ## v0.2.1 2023-01-16
 
 
@@ -851,6 +1039,17 @@
 
 
 
+### Fixed
+workflow version
+
+
+
+
+
+
+
+
+
 
 
 
@@ -885,6 +1084,14 @@
 
 
 ## v0.2.0 2023-01-16
+
+
+
+
+
+
+
+
 
 
 
@@ -1079,3 +1286,14 @@
 
 
 
+
+
+
+
+
+
+
+
+
+### Other
+initial commit
