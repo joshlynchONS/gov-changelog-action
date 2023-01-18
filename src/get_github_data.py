@@ -25,7 +25,7 @@ class Prefix:
         self.version_bump = version_bump
 
 
-class Releases:
+class Release:
     def __init__(self, tag, date):
         self.tag = tag
         self.date = date
@@ -120,10 +120,16 @@ def get_releases(repo):
         List of all releases from the github repository
     """
     releases = repo.get_releases()
-    release_tags = [r.tag_name for r in releases]
-    for r in releases:
-        print(r.created_at)
-    return release_tags
+    updated_releases = []
+    for release in releases:
+        tag = release.tag_name
+        date = release.created_at
+        date = date.strfrtime("%Y-%m-%d")
+        print(date)
+        # temp_release = Release(tag, date)
+        updated_releases.append(tag)
+
+    return updated_releases
 
 
 def get_prefixes(config):
