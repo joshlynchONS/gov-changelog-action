@@ -102,6 +102,10 @@ def update_commits(tags_sha_dict, commits):
             message = commit.commit.message.split("\n\n")[0]
             temp_commit = Commit(message, tag)
             updated_commits.append(temp_commit)
+            print("Commit")
+            print(commit.sha)
+            print(message)
+            print(tag)
 
     return updated_commits
 

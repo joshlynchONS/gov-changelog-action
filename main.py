@@ -24,9 +24,8 @@ g = Github(access_token)
 repo = g.get_repo("joshlynchONS/gov-changelog-action")
 
 tags_sha = get_tags_sha_dict(repo)
+print(tags_sha)
 commits = get_commits(repo, branch)
-for commit in commits:
-    print(commit)
 commits = update_commits(tags_sha, commits)
 prefixes = get_prefixes(config)
 releases = get_releases(repo, num_releases)
