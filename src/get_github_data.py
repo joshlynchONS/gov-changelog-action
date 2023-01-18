@@ -25,6 +25,12 @@ class Prefix:
         self.version_bump = version_bump
 
 
+class Releases:
+    def __init__(self, tag, date):
+        self.tag = tag
+        self.date = date
+
+
 def get_inputs(input_name: str, prefix="INPUT") -> str:
     """
     Get a Github actions input by name
@@ -115,6 +121,8 @@ def get_releases(repo):
     """
     releases = repo.get_releases()
     releases = [r.tag_name for r in releases]
+    release_dates = [r.created_at for r in releases]
+    print(release_dates)
     return releases
 
 

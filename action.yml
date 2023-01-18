@@ -9,9 +9,25 @@ inputs:
     description: "Github Access Token you want to use. Just pass GITHUB_TOKEN"
     required: true
   PATH:
-    description: "Path to the file you want to add contributors' list. You can use <branch>:<file> format to specify the branch"
+    description: "Path to the file you want to save the changelog as"
     required: false
     default: 'CHANGELOG.md'
+  BRANCH:
+    description: "The branch to update changelog in"
+    required: false
+    default: ''
+  COMMIT_MESSAGE:
+    description: "Commit message for the changelog update"
+    required: false
+    default: 'docs: update release notes'
+  UNRELEASED_COMMITS:
+    description: "Whether to include unreleased commits in the changelog"
+    required: false
+    default: 'false'
+  REGENERATE_COUNT:
+    description: "Regenerate n recent releases' changelog. All non-exist releases will be generated. -1 means regenerating all the releases and 0 means no old releases will be regenerated"
+    required: false
+    default: '0'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
