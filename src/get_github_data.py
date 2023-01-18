@@ -124,7 +124,7 @@ def get_releases(repo):
     for release in releases:
         tag = release.tag_name
         date = release.created_at
-        date = date.strfrtime("%Y-%m-%d")
+        date = date.strftime("%Y-%m-%d")
         print(date)
         # temp_release = Release(tag, date)
         updated_releases.append(tag)
