@@ -19,15 +19,15 @@ branch = "main"
 path = get_inputs("PATH")
 commit_message = get_inputs("COMMIT_MESSAGE")
 num_releases = get_inputs("RELEASE_COUNT")
+include_unreleased = get_inputs("UNRELEASED_COMMITS")
 
 g = Github(access_token)
 repo = g.get_repo("joshlynchONS/gov-changelog-action")
 
 tags_sha = get_tags_sha_dict(repo)
-print(tags_sha)
 commits = get_commits(repo, branch)
-commits = update_commits(tags_sha, commits)
+commits = update_commits(tags_sha, commits, include_unreleased)
 prefixes = get_prefixes(config)
-releases = get_releases(repo, num_releases)
+releases = get_releases(repo, num_releases, include_unreleased)
 changelog_content = create_changelog_text(releases, prefixes, commits)
 update_changelog(repo, path, commit_message, changelog_content)

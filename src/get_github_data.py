@@ -75,7 +75,7 @@ def get_tags_sha_dict(repo):
     return tags_sha
 
 
-def update_commits(tags_sha_dict, commits):
+def update_commits(tags_sha_dict, commits, unreleased_bool):
     """Iterates through all commits and turns them into the updated class.
     The output is a list of the updated commits
 
@@ -85,6 +85,8 @@ def update_commits(tags_sha_dict, commits):
         dictionary of all tags with their respective sha string
     commits : list[Github.commit class]
         list of all GitHub commits
+    unreleased_bool: bool
+        boolean variable on whether to include unreleased commits
 
     Returns
     -------
@@ -96,20 +98,23 @@ def update_commits(tags_sha_dict, commits):
     for k, v in tags_sha_dict.items():
         inv_tags_sha_dict[v] = k
 
+    if unreleased_bool:
+        current_release = "Unreleased"
+    else:
+        current_release = list(tags_sha_dict)[0]
+
     for commit in commits:
-        print("Commit")
-        print(commit.sha)
-        print(commit.commit.message.split("\n\n")[0])
         if commit.sha in inv_tags_sha_dict:
-            tag = inv_tags_sha_dict[commit.sha]
-            message = commit.commit.message.split("\n\n")[0]
-            temp_commit = Commit(message, tag)
-            updated_commits.append(temp_commit)
+            current_release = inv_tags_sha_dict[commit.sha]
+
+        message = commit.commit.message.split("\n\n")[0]
+        temp_commit = Commit(message, current_release)
+        updated_commits.append(temp_commit)
 
     return updated_commits
 
 
-def get_releases(repo, number_releases):
+def get_releases(repo, number_releases, unreleased_bool):
     """Get list of all releases within the repository
 
     Parameters
@@ -118,6 +123,8 @@ def get_releases(repo, number_releases):
         Github repository
     number_releases : int
         The number of releases to publish in the changelog
+    unreleased_bool: bool
+        boolean variable on whether to include unreleased commits
 
     Returns
     -------
@@ -130,6 +137,11 @@ def get_releases(repo, number_releases):
         number_releases = releases.totalCount
 
     updated_releases = []
+
+    if unreleased_bool:
+        temp_release = Release("Unreleased", "")
+        updated_releases.append(temp_release)
+
     for release_num in range(int(number_releases)):
         tag = releases[release_num].tag_name
         date = releases[release_num].created_at
