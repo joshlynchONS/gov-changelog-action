@@ -120,10 +120,10 @@ def get_releases(repo):
         List of all releases from the github repository
     """
     releases = repo.get_releases()
-    releases = [r.tag_name for r in releases]
+    release_tags = [r.tag_name for r in releases]
     release_dates = [r.created_at for r in releases]
     print(release_dates)
-    return releases
+    return release_tags
 
 
 def get_prefixes(config):
