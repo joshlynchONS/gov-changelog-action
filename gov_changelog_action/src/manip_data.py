@@ -47,7 +47,7 @@ def check_commit_and_unreleased_error(unreleased_bool, tags_sha_dict):
         current_release = "Unreleased"
     elif len(tags_sha_dict) == 0 and unreleased_bool.lower() == "false":
         raise ValueError("System found no release tags")
-    elif unreleased_bool == "false":
+    elif unreleased_bool.lower() == "false":
         current_release = list(tags_sha_dict)[0]
     else:
         raise ValueError(
