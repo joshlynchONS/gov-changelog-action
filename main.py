@@ -1,7 +1,7 @@
-from get_github_data import (
+from gov_changelog_action.src.get_github_data import (
     get_inputs,
 )
-from create_changelog import (
+from gov_changelog_action.src.create_changelog import (
     make_changelog,
 )
 from github import Github
