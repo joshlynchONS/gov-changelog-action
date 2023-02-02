@@ -1,10 +1,14 @@
 from jinja2 import Environment, FileSystemLoader
-from get_github_data import (
+from gov_changelog_action.src.get_github_data import (
     get_tags_sha_dict,
     get_commits,
     get_releases,
 )
-from manip_data import update_commits, get_prefixes, update_release_prefixes
+from gov_changelog_action.src.manip_data import (
+    update_commits,
+    get_prefixes,
+    update_release_prefixes,
+)
 
 
 def create_changelog_text(releases, commits):
@@ -14,8 +18,6 @@ def create_changelog_text(releases, commits):
     ----------
     releases : list[str]
         List of all unique releases
-    prefixes : list[str]
-        List of all unique prefixes
     commits : list[class Commit]
         List of all the commits
 
