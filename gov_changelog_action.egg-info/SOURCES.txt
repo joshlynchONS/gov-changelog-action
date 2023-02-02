@@ -3,6 +3,7 @@ pyproject.toml
 setup.cfg
 setup.py
 ./gov_changelog_action/__init__.py
+gov_changelog_action/__init__.py
 gov_changelog_action.egg-info/PKG-INFO
 gov_changelog_action.egg-info/SOURCES.txt
 gov_changelog_action.egg-info/dependency_links.txt
