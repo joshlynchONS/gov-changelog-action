@@ -22,6 +22,9 @@ def main():
     include_unreleased = get_inputs("UNRELEASED_COMMITS")
     repo_name = get_inputs("REPO_NAME")
 
+    if repo_name == "":
+        repo_name = get_inputs("REPOSITORY", "GITHUB")
+
     g = Github(access_token)
     repo = g.get_repo(repo_name)
 
