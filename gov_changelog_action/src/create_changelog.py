@@ -26,7 +26,7 @@ def create_changelog_text(releases, commits):
     str
         The content of the changelog as a string
     """
-    environment = Environment(loader=FileSystemLoader(""))
+    environment = Environment(loader=FileSystemLoader("gov_changelog_action/src/"))
     template = environment.get_template("template.txt")
     content = template.render(releases=releases, commits=commits)
     return content
