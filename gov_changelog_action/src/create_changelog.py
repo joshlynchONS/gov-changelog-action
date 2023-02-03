@@ -1,4 +1,4 @@
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, PackageLoader
 from gov_changelog_action.src.get_github_data import (
     get_tags_sha_dict,
     get_commits,
@@ -9,6 +9,10 @@ from gov_changelog_action.src.manip_data import (
     get_prefixes,
     update_release_prefixes,
 )
+import os
+
+
+print(os.path.dirname(os.path.realpath(__file__)))
 
 
 def create_changelog_text(releases, commits):
@@ -26,7 +30,7 @@ def create_changelog_text(releases, commits):
     str
         The content of the changelog as a string
     """
-    environment = Environment(loader=FileSystemLoader("gov_changelog_action/src/"))
+    environment = Environment(loader=PackageLoader("gov_changelog_action", "src"))
     template = environment.get_template("/template.txt")
     content = template.render(releases=releases, commits=commits)
     return content
