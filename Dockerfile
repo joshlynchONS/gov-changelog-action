@@ -11,6 +11,7 @@ RUN python -m venv vpy
 RUN . vpy/bin/activate
 RUN python -m pip install --upgrade pip setuptools wheel
 RUN pip install -r /requirements.txt
+RUN ls
 RUN pip install -e .
 RUN chmod +x /entrypoint.sh /main.py
 ENTRYPOINT ["/entrypoint.sh"]
