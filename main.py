@@ -20,9 +20,10 @@ def main():
     commit_message = get_inputs("COMMIT_MESSAGE")
     num_releases = get_inputs("RELEASE_COUNT")
     include_unreleased = get_inputs("UNRELEASED_COMMITS")
+    repo_name = get_inputs("REPO_NAME")
 
     g = Github(access_token)
-    repo = g.get_repo("joshlynchONS/gov-changelog-action")
+    repo = g.get_repo(repo_name)
 
     make_changelog(
         repo, config, branch, path, commit_message, num_releases, include_unreleased
