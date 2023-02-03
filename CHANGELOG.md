@@ -4,28 +4,129 @@
 
 ## Unreleased 
 
-### Fixed
+### Added
 
 
-fix missing dependency in update releases
+* update release notes
 
 
-
-fix error in adding prefix str not class to release class
-
+* update release notes
 
 
-
-fix non-updating release prefixes
+* update release notes
 
 
 
 
-fix non-updating release prefixes
 
 
 
-fix non-updating release prefixes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## v0.2.14 2023-01-25
+
+### Added
+
+
+
+
+
+* update release notes
+
+
+
+
+* update release notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,17 +198,15 @@ fix non-updating release prefixes
 
 
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -177,6 +276,198 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
+
+
+
+
+
+
+
+
+
+### Changed
+
+
+
+
+
+
+
+* change workflow to testing branch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Fixed
+
+
+
+
+
+
+
+
+
+* fix missing extension in dockerfile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## v0.2.13 2023-01-18
 
 ### Added
 
@@ -184,21 +475,227 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
-update release notes
 
 
 
 
-update release notes
+
+
+* update release notes
 
 
 
 
-update release notes
+
+* update release notes
 
 
 
-update release notes
+
+* update release notes
+
+
+
+
+* update release notes
+
+
+
+* update release notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+* fix missing dependency in update releases
+
+
+
+* fix error in adding prefix str not class to release class
+
+
+
+
+* fix non-updating release prefixes
+
+
+
+
+* fix non-updating release prefixes
+
+
+
+* fix non-updating release prefixes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Other
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
 
 
 
@@ -282,7 +779,17 @@ update release notes
 
 
 
-Add Unreleased commits to changelog
+
+
+
+
+
+
+
+
+
+
+* Add Unreleased commits to changelog
 
 
 
@@ -364,21 +871,31 @@ Add Unreleased commits to changelog
 
 
 
-update release notes
-
-
-update release notes
-
-
-update release notes
-
-
-update release notes
 
 
 
 
-update release notes
+
+
+
+
+
+
+* update release notes
+
+
+* update release notes
+
+
+* update release notes
+
+
+* update release notes
+
+
+
+
+* update release notes
 
 
 
@@ -457,7 +974,17 @@ update release notes
 
 
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+
+
+
+
+
+
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -539,7 +1066,17 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
-test commit for current branch
+
+
+
+
+
+
+
+
+
+
+* test commit for current branch
 
 
 
@@ -624,12 +1161,22 @@ test commit for current branch
 
 
 
-update release notes
 
 
 
 
-update release notes
+
+
+
+
+
+
+* update release notes
+
+
+
+
+* update release notes
 
 
 
@@ -708,7 +1255,17 @@ update release notes
 
 
 
-change workflow to new branch
+
+
+
+
+
+
+
+
+
+
+* change workflow to new branch
 
 
 
@@ -794,24 +1351,34 @@ change workflow to new branch
 
 
 
-update release notes
-
-
-
-
-update release notes
 
 
 
 
 
 
-update release notes
 
 
 
 
-update release notes
+* update release notes
+
+
+
+
+* update release notes
+
+
+
+
+
+
+* update release notes
+
+
+
+
+* update release notes
 
 
 
@@ -882,19 +1449,29 @@ update release notes
 
 
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
 
 
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+
+
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -968,25 +1545,35 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
-update template to work with release tags
-
-
-
-fix typo in get releases
-
-
-fix type error in get releases
-
-
-
-fix type error in get releases
 
 
 
 
 
 
-fix type error in get_releases
+
+
+
+
+* update template to work with release tags
+
+
+
+* fix typo in get releases
+
+
+* fix type error in get releases
+
+
+
+* fix type error in get releases
+
+
+
+
+
+
+* fix type error in get_releases
 
 
 
@@ -1070,7 +1657,17 @@ fix type error in get_releases
 
 
 
-change workflow version to main
+
+
+
+
+
+
+
+
+
+
+* change workflow version to main
 
 
 
@@ -1158,12 +1755,22 @@ change workflow version to main
 
 
 
-update workflow to new branch
 
 
 
 
-wrong input to get prefix function
+
+
+
+
+
+
+* update workflow to new branch
+
+
+
+
+* wrong input to get prefix function
 
 
 
@@ -1242,7 +1849,17 @@ wrong input to get prefix function
 
 
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+
+
+
+
+
+
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -1337,7 +1954,17 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+
+
+
+
+
+
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -1419,11 +2046,21 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
-update workflow to new branch
 
 
 
-fix incorrect branch in main
+
+
+
+
+
+
+
+* update workflow to new branch
+
+
+
+* fix incorrect branch in main
 
 
 
@@ -1507,10 +2144,20 @@ fix incorrect branch in main
 
 
 
-workflow to correct branch
 
 
-update template
+
+
+
+
+
+
+
+
+* workflow to correct branch
+
+
+* update template
 
 
 
@@ -1608,7 +2255,17 @@ update template
 
 
 
-Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
+
+
+
+
+
+
+
+
+
+
+* Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
@@ -1691,7 +2348,17 @@ Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
 
-update checkout version in workflow
+
+
+
+
+
+
+
+
+
+
+* update checkout version in workflow
 
 
 
@@ -1776,7 +2443,17 @@ update checkout version in workflow
 
 
 
-workflow version
+
+
+
+
+
+
+
+
+
+
+* workflow version
 
 
 
@@ -1863,7 +2540,17 @@ workflow version
 
 
 
-initial commit
 
 
-Initial commit
+
+
+
+
+
+
+
+
+* initial commit
+
+
+* Initial commit
