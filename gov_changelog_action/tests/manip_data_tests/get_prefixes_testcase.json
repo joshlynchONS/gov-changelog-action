@@ -1,0 +1,22 @@
+{
+    "test case 1" : {
+        "prefixes": {
+            "add": {
+                "heading": "Added",
+                "release": "0.1.0",
+                "show": true
+            },
+            "fix": {
+                "heading": "Bug",
+                "release": "0.0.1",
+                "show": true
+            },
+            "feat": {
+                "heading": "chore",
+                "release": "0.1.0",
+                "show": false
+            }
+        },
+        "description" : "Test fake prefix/number prefixes, number releases and prefixe strings"
+    }
+}

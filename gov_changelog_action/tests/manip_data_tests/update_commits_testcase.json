@@ -1,0 +1,46 @@
+{
+    "test case 1" : {
+        "tags_sha_dict" : {"v0.0.1" : "1234769"},
+        "commits" : [
+            {"sha": "0000769", "message" : "Test Message 1"},
+            {"sha": "1234769", "message" : "Test Message 2"}        ],
+        "unreleased_bool" : "true",
+        "description" : "test function includes unreleased commit"
+    },
+    "test case 2" : {
+        "tags_sha_dict" : {"v0.0.1" : "1234769"},
+        "commits" : [
+            {"sha": "0000769", "message" : "Test Message 1"},
+            {"sha": "1234769", "message" : "Test Message 2"}
+        ],
+        "unreleased_bool" : "false",
+        "description" : "test function does not include unreleased commit"
+    },
+    "test case 3" : {
+        "tags_sha_dict" : {"v0.0.1" : "1234769"},
+        "commits" : [
+            {"sha": "0000769", "message" : "Test Message 1"},
+            {"sha": "1234769", "message" : "Test Message 2"}
+        ],
+        "unreleased_bool" : "qqqqqqq",
+        "description" : "test function recognises incorrect user input"
+    },
+    "test case 4" : {
+        "tags_sha_dict" : {"v0.0.1" : "1234769"},
+        "commits" : [
+            {"sha": "0000769", "message" : "Test Message 1"},
+            {"sha": "0001769", "message" : "Test Message 2"}
+        ],
+        "unreleased_bool" : "false",
+        "description" : "test function raises error as no commits to output"
+    },
+    "test case 5" : {
+        "tags_sha_dict" : {},
+        "commits" : [
+            {"sha": "0000769", "message" : "Test Message 1"},
+            {"sha": "1234769", "message" : "Test Message 2"}
+        ],
+        "unreleased_bool" : "false",
+        "description" : "test function raises error as no releases found"
+    }
+}

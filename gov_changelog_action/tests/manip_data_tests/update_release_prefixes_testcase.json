@@ -1,0 +1,20 @@
+{
+    "test case 1" : {
+        "releases" : [
+            {"tag" : "v0.0.1"},
+            {"tag" : "v0.0.2"}
+        ],
+        "commits" : [
+            {"release" : "v0.0.1", "prefix" : "add"},
+            {"release" : "v0.0.1", "prefix" : "change"},
+            {"release" : "v0.0.1", "prefix" : "qqqqqqq"},
+            {"release" : "v0.0.2", "prefix" : "fix"}
+        ],
+        "prefixes" : [
+            {"prefix" : "fix"},
+            {"prefix" : "add"},
+            {"prefix" : "change"}
+        ],
+        "description" : "Test fake prefix/number prefixes, number releases and prefixe strings"
+    }
+}

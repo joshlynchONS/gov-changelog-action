@@ -20,6 +20,43 @@ class Prefix:
         self.version_bump = version_bump
 
 
+def check_commit_and_unreleased_error(unreleased_bool, tags_sha_dict):
+    """Return the release to start on or raise an error if there are: no
+    releases to print or the user inputted an invalid string
+
+    Parameters
+    ----------
+    unreleased_bool : str
+        string representing a boolean variable
+    tags_sha_dict : dict{tag -> str: sha -> str}
+        dictionary of all tags with their respective sha string
+
+    Returns
+    -------
+    str
+        The latest release
+
+    Raises
+    ------
+    ValueError
+        If there are no release tags available
+    ValueError
+        The user inputted an incorrect value
+    """
+    if unreleased_bool.lower() == "true":
+        current_release = "Unreleased"
+    elif len(tags_sha_dict) == 0 and unreleased_bool.lower() == "false":
+        raise ValueError("System found no release tags")
+    elif unreleased_bool.lower() == "false":
+        current_release = list(tags_sha_dict)[0]
+    else:
+        raise ValueError(
+            "The user inputted variable 'UNRELEASED_COMMITS' should"
+            "be either 'true' or 'false'."
+        )
+    return current_release
+
+
 def update_commits(tags_sha_dict, commits, unreleased_bool):
     """Iterates through all commits and turns them into the updated class.
     The output is a list of the updated commits
@@ -43,18 +80,27 @@ def update_commits(tags_sha_dict, commits, unreleased_bool):
     for k, v in tags_sha_dict.items():
         inv_tags_sha_dict[v] = k
 
-    if unreleased_bool == "true":
-        current_release = "Unreleased"
-    else:
-        current_release = list(tags_sha_dict)[0]
+    current_release = check_commit_and_unreleased_error(unreleased_bool, tags_sha_dict)
 
     for commit in commits:
-        if commit.sha in inv_tags_sha_dict:
+        if (
+            commit.sha in inv_tags_sha_dict
+            and current_release != inv_tags_sha_dict[commit.sha]
+        ):
             current_release = inv_tags_sha_dict[commit.sha]
 
-        message = commit.commit.message.split("\n\n")[0]
-        temp_commit = Commit(message, current_release)
-        updated_commits.append(temp_commit)
+        if unreleased_bool == "true":
+            message = commit.commit.message.split("\n\n")[0]
+            temp_commit = Commit(message, current_release)
+            updated_commits.append(temp_commit)
+
+        elif commit.sha in inv_tags_sha_dict:
+            message = commit.commit.message.split("\n\n")[0]
+            temp_commit = Commit(message, current_release)
+            updated_commits.append(temp_commit)
+
+    if len(updated_commits) == 0:
+        raise ValueError("There are no released commits to use.")
 
     return updated_commits
 
