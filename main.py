@@ -6,9 +6,11 @@ from gov_changelog_action.src.create_changelog import (
 )
 from github import Github
 import yaml
+import os
 
 
 def main():
+    print(os.path.dirname(os.path.realpath(__file__)))
     with open("/changelog-config.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
 

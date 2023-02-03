@@ -9,10 +9,6 @@ from gov_changelog_action.src.manip_data import (
     get_prefixes,
     update_release_prefixes,
 )
-import os
-
-
-print(os.path.dirname(os.path.realpath(__file__)))
 
 
 def create_changelog_text(releases, commits):
