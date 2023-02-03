@@ -9,7 +9,7 @@ import yaml
 
 
 def main():
-    with open("changelog-config.yml") as f:
+    with open("/changelog-config.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
 
     access_token = get_inputs("ACCESS_TOKEN")
