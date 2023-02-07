@@ -24,10 +24,6 @@ inputs:
     description: "Whether to include unreleased commits in the changelog"
     required: false
     default: 'false'
-  RELEASE_COUNT:
-    description: "Number of releases to put into the changelog. Use -1 for all releases"
-    required: false
-    default: '-1'
 outputs:
   time: # id of output
     description: 'The time we greeted you'

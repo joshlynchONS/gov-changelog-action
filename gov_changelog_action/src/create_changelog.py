@@ -72,9 +72,7 @@ def update_changelog(repo, path, commit_message, content):
     print("UPDATE CHANGELOG")
 
 
-def make_changelog(
-    repo, config, branch, path, commit_message, num_releases, include_unreleased
-):
+def make_changelog(repo, config, branch, path, commit_message, include_unreleased):
     """Create or update a changelog in the users repository
 
     Parameters
@@ -89,8 +87,6 @@ def make_changelog(
         The file path to create/update the changelog
     commit_message : str
         The commit message for the github action
-    num_releases : str
-        An intereger number of releases to regenerate
     include_unreleased : str
         Boolean variable whether to include unreleased commits
     """
@@ -98,7 +94,7 @@ def make_changelog(
     commits = get_commits(repo, branch)
     commits = update_commits(tags_sha, commits, include_unreleased)
     prefixes = get_prefixes(config)
-    releases = get_releases(repo, num_releases, include_unreleased)
+    releases = get_releases(repo, include_unreleased)
     releases = update_release_prefixes(releases, commits, prefixes)
     changelog_content = create_changelog_text(releases, commits)
 
