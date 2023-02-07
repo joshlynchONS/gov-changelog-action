@@ -16,15 +16,12 @@ def main():
     branch = get_inputs("BRANCH")
     path = get_inputs("PATH")
     commit_message = get_inputs("COMMIT_MESSAGE")
-    num_releases = get_inputs("RELEASE_COUNT")
     include_unreleased = get_inputs("UNRELEASED_COMMITS")
 
     g = Github(access_token)
     repo = g.get_repo("joshlynchONS/gov-changelog-action")
 
-    make_changelog(
-        repo, config, branch, path, commit_message, num_releases, include_unreleased
-    )
+    make_changelog(repo, config, branch, path, commit_message, include_unreleased)
 
 
 if __name__ == "__main__":

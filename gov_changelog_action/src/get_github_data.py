@@ -70,15 +70,13 @@ def get_tags_sha_dict(repo):
     return tags_sha
 
 
-def get_releases(repo, number_releases, unreleased_bool):
+def get_releases(repo, unreleased_bool):
     """Get list of all releases within the repository
 
     Parameters
     ----------
     repo : Github.repo
         Github repository
-    number_releases : int
-        The number of releases to publish in the changelog
     unreleased_bool: bool
         boolean variable on whether to include unreleased commits
 
@@ -89,16 +87,13 @@ def get_releases(repo, number_releases, unreleased_bool):
     """
     releases = repo.get_releases()
 
-    if int(number_releases) == -1:
-        number_releases = releases.totalCount
-
     updated_releases = []
 
     if unreleased_bool == "true":
         temp_release = Release("Unreleased", "")
         updated_releases.append(temp_release)
 
-    for release_num in range(int(number_releases)):
+    for release_num in range(int(releases.totalCount)):
         tag = releases[release_num].tag_name
         date = releases[release_num].created_at
         date = date.strftime("%Y-%m-%d")
