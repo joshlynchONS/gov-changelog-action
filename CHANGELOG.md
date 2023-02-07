@@ -4,16 +4,288 @@
 
 ## Unreleased 
 
+## 0.2.19 2023-02-07
+
+### Other
+
+
+* Merge branch 'template_issue'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 0.2.18 2023-02-07
+
+### Fixed
+
+
+
+* removed number of releases from user options to align with best practices (#8)
+
+
+
+* make repo name user enterable
+
+
+* make repo name user enterable
+
+
+
+
+* change loader of jinja template
+
+
+
+* update template location in create changelog file
+
+
+* update changelog config location in main.py
+
+
+* change changelog config from copy to add in docker file
+
+
+* add changelog-config to dockerfile
+
+
+
+* update template location in create changelog module
+
+
+* update template location in create changelog module
+
+
+* change template.txt in dockerfile
+
+
+* change template.txt in dockerfile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Added
 
 
-* update release notes
 
 
 * update release notes
 
 
+
+
 * update release notes
+
+
+
+
+* update release notes
+
+
+
+
+
+
+* update release notes
+
+
+
+
+
 
 
 
@@ -114,6 +386,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * update github workflow directory
 
 
@@ -209,6 +497,22 @@
 ## v0.2.16 2023-02-03
 
 ### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -316,6 +620,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Added testing for all base python functions
 
 
@@ -407,6 +727,22 @@
 
 
 ### Added
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -525,6 +861,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * update release notes
 
 
@@ -613,6 +965,22 @@
 
 
 ### Other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -725,6 +1093,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * change workflow to testing branch
 
 
@@ -809,6 +1193,22 @@
 
 
 ### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -927,6 +1327,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * update release notes
 
 
@@ -1034,6 +1450,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * fix missing dependency in update releases
 
 
@@ -1121,6 +1553,22 @@
 
 
 ### Other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1256,6 +1704,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Add Unreleased commits to changelog
 
 
@@ -1323,6 +1787,22 @@
 
 
 ### Added
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1465,6 +1945,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
@@ -1527,6 +2023,22 @@
 
 
 ### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1666,6 +2178,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * update release notes
 
 
@@ -1727,6 +2255,22 @@
 
 
 ### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1870,6 +2414,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * update release notes
 
 
@@ -1975,6 +2535,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
@@ -2033,6 +2609,22 @@
 
 
 ### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2197,6 +2789,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * change workflow version to main
 
 
@@ -2302,6 +2910,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * update workflow to new branch
 
 
@@ -2341,6 +2965,22 @@
 
 
 ### Other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2515,6 +3155,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
@@ -2543,6 +3199,22 @@
 
 
 ### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2645,6 +3317,22 @@
 ## v0.2.4 2023-01-17
 
 ### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2837,6 +3525,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Merge branch 'main' of https://github.com/joshlynchONS/gov-changelog-action
 
 
@@ -2847,6 +3551,22 @@
 
 
 ### Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3039,6 +3759,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * workflow version
 
 
@@ -3049,6 +3785,22 @@
 ## v0.1.0 2023-01-12
 
 ### Other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
