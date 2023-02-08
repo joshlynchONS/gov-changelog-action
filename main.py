@@ -4,6 +4,7 @@ from gov_changelog_action.src.get_github_data import (
 from gov_changelog_action.src.create_changelog import (
     make_changelog,
 )
+from gov_changelog_action.src.update_release import create_tag
 from github import Github
 import yaml
 import os
@@ -20,6 +21,8 @@ def main():
     commit_message = get_inputs("COMMIT_MESSAGE")
     include_unreleased = get_inputs("UNRELEASED_COMMITS")
     repo_name = get_inputs("REPO_NAME")
+    update_changelog = get_inputs("UPDATE_CHANGELOG")
+    create_tag_bool = get_inputs("CREATE_TAG")
 
     if repo_name == "":
         repo_name = get_inputs("REPOSITORY", "GITHUB")
@@ -27,7 +30,11 @@ def main():
     g = Github(access_token)
     repo = g.get_repo(repo_name)
 
-    make_changelog(repo, config, branch, path, commit_message, include_unreleased)
+    if update_changelog == "true".lower():
+        make_changelog(repo, config, branch, path, commit_message, include_unreleased)
+
+    if create_tag_bool == "true".lower():
+        create_tag(repo, branch)
 
 
 if __name__ == "__main__":

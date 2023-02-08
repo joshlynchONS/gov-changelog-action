@@ -24,6 +24,14 @@ inputs:
     description: "Whether to include unreleased commits in the changelog"
     required: false
     default: 'false'
+  CREATE_TAG:
+    description: "Whether to create a new tag based on the unreleased commits"
+    required: false
+    default: 'false'
+  UPDATE_CHANGELOG:
+    description: "Whether to update the changelog"
+    required: false
+    default: 'false'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
