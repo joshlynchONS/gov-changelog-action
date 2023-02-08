@@ -31,9 +31,11 @@ def main():
     repo = g.get_repo(repo_name)
 
     if update_changelog == "true".lower():
+        print("Updating changelog")
         make_changelog(repo, config, branch, path, commit_message, include_unreleased)
 
     if create_tag_bool == "true".lower():
+        print("creating a new tag")
         create_tag(repo, branch)
 
 
