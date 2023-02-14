@@ -7,11 +7,11 @@ from gov_changelog_action.src.create_changelog import (
 from gov_changelog_action.src.update_release import create_tag
 from github import Github
 import yaml
-import os
 
 
 def main():
-    print(os.path.dirname(os.path.realpath(__file__)))
+    print("STARTING PROCESS")
+
     with open("/changelog-config.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
 
@@ -30,6 +30,8 @@ def main():
     g = Github(access_token)
     repo = g.get_repo(repo_name)
 
+    print("BEFORE IF STATEMENTS")
+
     if update_changelog == "true".lower():
         print("Updating changelog")
         make_changelog(repo, config, branch, path, commit_message, include_unreleased)
@@ -37,6 +39,8 @@ def main():
     if create_tag_bool == "true".lower():
         print("creating a new tag")
         create_tag(repo, branch)
+
+    print("AFTER IF STATEMENTS")
 
 
 if __name__ == "__main__":
