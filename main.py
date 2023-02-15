@@ -31,6 +31,8 @@ def main():
     repo = g.get_repo(repo_name)
 
     print("BEFORE IF STATEMENTS")
+    print("create tag {}".format(create_tag))
+    print("update_changelog {}".format(update_changelog))
 
     if update_changelog == "true".lower():
         print("Updating changelog")
