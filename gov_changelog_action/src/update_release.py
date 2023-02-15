@@ -26,7 +26,7 @@ def find_version_bump(repo, branch, tags_sha_dict):
     current_bump = "none"
 
     for commit in commits:
-        while commit.sha not in inv_tags_sha_dict:
+        if commit.sha not in inv_tags_sha_dict:
             message = commit.commit.message.split("\n\n")[0]
             if "[" in message and "]" in message:
                 split_message = message.split("[")[1]
