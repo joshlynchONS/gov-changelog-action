@@ -12,6 +12,7 @@ def create_tag(repo, branch):
     tags_sha_dict = get_tags_sha_dict(repo)
     version = semantic_version.Version(recent_tag)
     version_bump = find_version_bump(repo, branch, tags_sha_dict)
+    print(version_bump)
     new_version = increase_version(version, version_bump)
     repo.create_git_tag(new_version, new_version)
     print("CREATED TAG {}".format(new_version))
