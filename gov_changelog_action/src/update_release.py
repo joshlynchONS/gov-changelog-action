@@ -65,4 +65,4 @@ def increase_version(current_version, version_bump):
             "The version bump specified does not match the "
             "correct semantic version specifications"
         )
-    return new_version
+    return str(new_version)
