@@ -43,14 +43,12 @@ def find_version_bump(repo, branch, tags_sha_dict):
 
 
 def return_max_version_bump(old_max, current_bump):
+    new_max = old_max
     if current_bump in ["patch", "minor", "major"]:
-
         if old_max == "none" or old_max == "patch":
             new_max = current_bump
         elif old_max == "minor" and current_bump == "major":
             new_max = current_bump
-        else:
-            new_max = old_max
 
     return new_max
 
