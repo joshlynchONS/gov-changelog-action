@@ -24,9 +24,14 @@ inputs:
     description: "Whether to include unreleased commits in the changelog"
     required: false
     default: 'false'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  CREATE_TAG:
+    description: "do you want to create a new tag"
+    required: false
+    default: 'false'
+  UPDATE_CHANGELOG:
+    description: "Whether to update the changelog"
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
