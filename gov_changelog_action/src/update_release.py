@@ -7,14 +7,17 @@ from gov_changelog_action.src.get_github_data import (
 
 
 def create_tag(repo, branch):
+    print("CURRENT TAGS")
     releases = get_releases(repo, "false")
     recent_tag = releases[0].tag
     tags_sha_dict = get_tags_sha_dict(repo)
+    print(tags_sha_dict)
     version = semantic_version.Version(recent_tag)
     version_bump, unreleased_sha = find_version_bump(repo, branch, tags_sha_dict)
     new_version = increase_version(version, version_bump)
     repo.create_git_tag(new_version, new_version, type="commit", object=unreleased_sha)
     print("CREATED TAG {}".format(new_version))
+    print(get_tags_sha_dict(repo))
 
 
 def find_version_bump(repo, branch, tags_sha_dict):
