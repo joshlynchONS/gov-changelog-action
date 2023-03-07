@@ -16,6 +16,7 @@ def create_tag(repo, branch):
     version_bump, unreleased_sha = find_version_bump(repo, branch, tags_sha_dict)
     new_version = increase_version(version, version_bump)
     repo.create_git_tag(new_version, new_version, type="commit", object=unreleased_sha)
+    print("before")
     repo.create_git_ref(version, unreleased_sha)
     print("CREATED TAG {}".format(new_version))
     print(get_tags_sha_dict(repo))
