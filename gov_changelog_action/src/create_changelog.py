@@ -69,6 +69,7 @@ def update_changelog(repo, path, commit_message, content):
     current_changelog = repo.get_contents(path)
     sha = current_changelog.sha
     repo.update_file(path, commit_message, content, sha)
+    repo.create_git_ref("refs/tags/0.7.0", sha)
     print("UPDATE CHANGELOG")
 
 
